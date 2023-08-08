@@ -35,18 +35,21 @@ class Record:
 
         if not isinstance(phone, Phone):
             raise ValueError("Phone must be an instance of Phone class")
+        else:
             self.phones.append(phone)
 
     def remove_phone(self, phone):
 
         if not isinstance(phone, Phone):
             raise ValueError("Phone must be an instance of Phone class")
+        else:
             self.phones.remove(phone)
 
     def edit_phone(self, old_phone, new_phone):
 
         if not isinstance(old_phone, Phone) or not isinstance(new_phone, Phone):
             raise ValueError("Phone must be an instance of Phone class")
+        else:
             index = self.phones.index(old_phone)
             self.phones[index] = new_phone
 
@@ -54,18 +57,21 @@ class Record:
 
         if not isinstance(email, Email):
             raise ValueError("E-mail must be an instance of Email class")
+        else:
             self.emails.append(email)
 
     def remove_email(self, email):
 
         if not isinstance(email, Email):
             raise ValueError("E-mail must be an instance of Email class")
+        else:
             self.emails.remove(email)
 
     def edit_phone(self, old_email, new_email):
 
         if not isinstance(old_email, Email) or not isinstance(new_email, Email):
             raise ValueError("E-mail must be an instance of Email class")
+        else:
             index = self.emails.index(old_email)
             self.emails[index] = new_email
     
